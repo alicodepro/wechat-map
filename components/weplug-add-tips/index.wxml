@@ -1,0 +1,6 @@
+<view class="box" wx:if="{{SHOW_TOP}}" bindtap="okHandler">
+  <view class='arrow'></view>
+  <view class='body'>
+    <text>{{text}}</text>
+  </view>
+</view>

@@ -1,0 +1,89 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.1",
+	"appid": "wxb94a0cf3ea7acb9c",
+	"projectname": "map",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": 0,
+					"name": "地图编辑页面",
+					"pathName": "pages/map/edit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户页面",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "保存地图",
+					"pathName": "pages/map/save",
+					"query": "mapContent={\"points\":[{\"longitude\":113.32494378902433,\"latitude\":23.098790023636788,\"color\":\"#f9a336\",\"content\":\"测试备注\"}],\"lines\":[{\"points\":[{\"latitude\":23.099199574184507,\"longitude\":113.3258932910156},{\"latitude\":23.098893644977736,\"longitude\":113.32590401985166},{\"latitude\":23.098493962222403,\"longitude\":113.32592547752378},{\"latitude\":23.09824230950714,\"longitude\":113.32593084194181},{\"latitude\":23.09824724387864,\"longitude\":113.32563043453214},{\"latitude\":23.09826698136281,\"longitude\":113.32542122222898}],\"color\":\"#f9a336\",\"width\":6,\"arrowLine\":true,\"content\":\"测试线路\"}]}",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "地图详情",
+					"pathName": "pages/map/show",
+					"query": "id=5d6f6f495fcc736893824904",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户页",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的地图",
+					"pathName": "pages/map/list",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

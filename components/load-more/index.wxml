@@ -1,0 +1,23 @@
+<view class="load-more">
+	<view class="load-more__img" wx:if="{{status == 'loading' && showIcon}}">
+		<view class="load1">
+			<view style="background: {{color}};"></view>
+			<view style="background: {{color}};"></view>
+			<view style="background: {{color}};"></view>
+			<view style="background:{{color}};"></view>
+		</view>
+		<view class="load2">
+			<view style="background:{{color}};"></view>
+			<view style="background:{{color}};"></view>
+			<view style="background:{{color}};"></view>
+			<view style="background:{{color}};"></view>
+		</view>
+		<view class="load3">
+			<view style="background:{{color}};"></view>
+			<view style="background:{{color}};"></view>
+			<view style="background:{{color}};"></view>
+			<view style="background:{{color}};"></view>
+		</view>
+	</view>
+	<text class="load-more__text" style="color: {{color}};">{{(status == 'more')? contentdown : ((status == 'loading') ? contentrefresh : contentnomore) }}</text>
+</view>

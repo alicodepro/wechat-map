@@ -1,0 +1,104 @@
+<!--pages/map/edit.wxml-->
+<view class="container">
+	<!-- 编辑工具栏 -->
+	<view class='toolbar padding'>
+		<view class='tools'>
+			<view class='tool' bindtap="changeEditType" data-type="point">
+				<view class='tool-icon'>
+					<image src='../../static/icon/map/point.png'></image>
+				</view>
+				<view>点</view>
+				<i wx:if="{{editType == 'point'}}" class="red-point"></i>
+			</view>
+			<view class='tool' bindtap="changeEditType" data-type="line">
+				<view class='tool-icon'>
+					<image src='../../static/icon/map/line.png'></image>
+				</view>
+				<view>路线</view>
+				<i wx:if="{{editType == 'line'}}" class="red-point"></i>
+			</view>
+			<view class='tool' bindtap="openBrushSetting">
+				<view class='tool-icon'>
+					<image src='../../static/icon/map/palette.png'></image>
+				</view>
+				<view>设置</view>
+			</view>
+			<view class='tool' bindtap="rebackOneStep">
+				<view class='tool-icon'>
+					<image src='../../static/icon/map/cancle.png'></image>
+				</view>
+				<view>撤销</view>
+			</view>
+			<view class='tool' bindtap="clearOne">
+				<view class='tool-icon'>
+					<image src='../../static/icon/map/clear.png'></image>
+				</view>
+				<view>清除</view>
+			</view>
+			<!-- saveMap -->
+			<view class='tool' bindtap="saveMap">
+				<view class='tool-icon'>
+					<image src='../../static/icon/map/save.png'></image>
+				</view>
+				<view>保存</view>
+			</view>
+		</view>
+	</view>
+	<!-- 右侧菜单 -->
+	<view class="menu">
+		<view class='menu-item menu-item-border-bottom' bindtap="addPoint">
+			<image class="menu-item-icon" src="../../static/icon/map/add_point.png"></image>
+			<view>打点</view>
+		</view>
+		<view class='menu-item' bindtap="confirmOne">
+			<image class="menu-item-icon" src="../../static/icon/map/comfirm.png"></image>
+			<view>确认</view>
+		</view>
+	</view>
+	<!-- 地图 -->
+	<view class='map'>
+		<map id="editMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" style="width: 100%; height: 100vh;"
+		 subkey=" TKGBZ-TRBKX-J3X4F-7MWBL-TMZG3-DSBFO" show-location="true" enable-satellite="{{showSatellite}}"
+		 enable-traffic="false" markers="{{markers}}" polyline="{{polylines}}">
+			<cover-view class='layers controll' bindtap='layers' hidden="{{!showMapControll}}">
+				<cover-image src='../../static/icon/layers.png' class='ten_l'></cover-image>
+			</cover-view>
+			<cover-view class='position controll' bindtap='getLocation' hidden="{{!showMapControll}}">
+				<cover-image src='../../static/icon/position.png' class='ten_l'></cover-image>
+			</cover-view>
+			<!-- 需要动态计算位置 -->
+			<cover-view class='center' style="top: {{centerPosition.y}}px;left: {{centerPosition.x}}px;" hidden="{{!showMapControll}}">
+				<cover-image src='../../static/icon/map/cross_hair.png' class='ten_l'></cover-image>
+			</cover-view>
+		</map>
+	</view>
+	<!-- 笔刷设置弹出层 -->
+	<van-popup show="{{ showSetting }}" position="bottom" bind:close="closeBrushSetting" z-index="9999" custom-style="background:#f1f1f1;">
+		<view class="settings">
+			<view class="setting">
+				<view class="brush">
+					<van-slider value="{{sliderValue}}" use-button-slot bind:drag="changeBrush" step="10" min="10" max="100"
+					 bar-height="3px">
+						<view class="brush-slider" slot="button">{{sliderValue/10}}</view>
+					</van-slider>
+				</view>
+			</view>
+			<view class="setting">
+				<view class="colors">
+					<view class="color-item {{brushColor==color ? 'color-selected':'' }}" wx:for="{{colors}}" wx:for-item="color"
+					 wx:key="index" style="background: {{color}};" bindtap='changeColor' data-index="{{index}}"></view>
+				</view>
+			</view>
+			<view class="setting">
+				<view class="direction">
+					<view>线路存在方向</view>
+					<van-switch checked="{{hasDirection}}" active-value="#4c84ff" bind:change="changeBrushDirection" size="24px" />
+				</view>
+			</view>
+		</view>
+	</van-popup>
+	<!-- 备注信息弹窗 、-->
+	<van-dialog use-slot title="请输入标题/备注/地址" show="{{showNote}}" bind:close="closeNote">
+		<van-field value="{{note}}" placeholder="内容会显示在标记的上方" border="{{ false }}" bind:change="changeNote"  maxlength="20"/>
+	</van-dialog>
+</view>

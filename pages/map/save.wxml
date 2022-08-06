@@ -1,0 +1,20 @@
+<!--pages/map/save.wxml-->
+<view class="container">
+	<view class="input">
+		<view class="label">地图标题</view>
+		<view class="tip">
+			标题可以使用小区名、楼宇号、用途等。好的标题可以更准确的搜索
+		</view>
+		<van-field value="{{ title }}" placeholder="请为地图取一个标题" bind:change="inputTitle" required="true" custom-style="border-bottom: #f9a336 dashed 1px;" placeholder-style="color:#f9a336;" maxlength="20"/>
+	</view>
+	<view class="input">
+		<view class="label">地图描述</view>
+		<view class="tip">
+			地图描述可以介绍地图的用途，或者是区域的交通情况或者限制。例如是否需要刷卡，汽车或电动车能否进入等
+		</view>
+		<van-field value="{{ description }}" type="textarea" placeholder="(可选) 请输入地图描述" bind:change="inputDesc" autosize="true" custom-style="border-bottom: #f9a336 dashed 1px;" placeholder-style="color:#f9a336;" maxlength="200"/>
+	</view>
+	<view class="save">
+		<button class="save-btn" bindtap="saveMap">保存</button>
+	</view>
+</view>

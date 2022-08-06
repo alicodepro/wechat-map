@@ -1,0 +1,50 @@
+<!--pages/map/show.wxml-->
+<view class="container">
+	<ticket-report-wrapper>
+		<view class="map">
+			<map id="showMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" style="width: 100%; height: 75vh;"
+			 subkey=" TKGBZ-TRBKX-J3X4F-7MWBL-TMZG3-DSBFO" show-location="true" enable-satellite="{{showSatellite}}"
+			 enable-traffic="false" markers="{{markers}}" polyline="{{polylines}}">
+			 <cover-view class='full-screen controll' bindtap='fullScreen'>
+			 	<cover-image src='../../static/icon/map/full_screen.png' class='ten_l'></cover-image>
+			 </cover-view>
+			 <cover-view class='layers controll' bindtap='layers'>
+			 	<cover-image src='../../static/icon/layers.png' class='ten_l'></cover-image>
+			 </cover-view>
+			 <cover-view class='position controll' bindtap='getLocation'>
+			 	<cover-image src='../../static/icon/position.png' class='ten_l'></cover-image>
+			 </cover-view>
+			</map>
+		</view>
+		<view class="opreations">
+			<view class="opreation" bindtap="copyToken" style="background:#4c84ff ;">
+				<ticket-report-wrapper>复制地图口令</ticket-report-wrapper>
+			</view>
+			<button class="opreation share-btn" open-type="share">
+				<ticket-report-wrapper>分享地图</ticket-report-wrapper>
+			</button>
+		</view>
+		<view class="contents">
+			<view class="content">
+				<view class="content-item">
+					<view class="title">{{map.title}}</view>
+					<view class="tip">地图口令：{{map.token}}</view>
+				</view>
+				<view class="content-item" style="border-top:#dbdbdb dashed 1px;padding-top:15px;">
+					<view class="desc">
+						{{map.description}}
+					</view>
+				</view>
+			</view>
+			<view class="content">
+				<button class="create-btn" bindtap="createMap">
+					<ticket-report-wrapper>我也想创造地图</ticket-report-wrapper>
+				</button>
+			</view>
+		</view>
+		<!-- 口令复制成功弹窗 -->
+		<!-- <van-popup show="true" position="bottom" bind:close="closeBrushSetting" z-index="9999" custom-style="background:#f1f1f1;">
+			这是一个弹窗
+		</van-popup> -->
+	</ticket-report-wrapper>
+</view>

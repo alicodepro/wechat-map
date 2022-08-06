@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+	  "add-tips": "/components/weplug-add-tips/index",
+	  "van-field": "../../vant/field/index"
+  }
+}

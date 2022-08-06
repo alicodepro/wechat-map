@@ -1,0 +1,89 @@
+/* pages/map/show.wxss */
+.map {
+	width: 100%;
+	height: 75vh;
+	background: #f1f1f1;
+}
+/* 地图控件 */
+.controll {
+	position: relative;
+	left: 15px;
+	padding: 5px;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	border-radius: 100px;
+	margin: 10px 0;
+	z-index: 1;
+}
+.full-screen{
+	top: 50%;
+}
+.layers {
+	top: 50%;
+}
+
+.position {
+	top: 50%;
+}
+
+.opreations {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 120rpx;
+	box-shadow: 0 2px 7px 0 #bfbfbf;
+	border-bottom: #c2c2c2 dashed 1px;
+	background: #FFF;
+}
+
+.opreation{
+	width: 50%;
+	height: 80rpx;
+	line-height: 80rpx;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 100rpx;
+	margin: 10px;
+}
+.share-btn{
+	border: 0;
+	background: #f9a336;
+}
+
+.contents{
+	margin-bottom: 30px;
+}
+.content {
+	padding: 15px;
+	background: #fff;
+}
+
+.content-item-top {
+	border-top: #c2c2c2 solid 1px;
+}
+
+.title {
+	line-height: 40px;
+}
+
+.tip {
+	font-size: 14px;
+	line-height: 30px;
+	padding-bottom:10px;
+	color: #8a8a8a;
+}
+
+.desc {
+	color: #8a8a8a;
+	line-height: 25px;
+	font-size: 14px;
+}
+.create-btn{
+	border: 1rpx solid #f9a336;
+	border-radius: 200px;
+	color: #f9a336;
+	background: #fff;
+}

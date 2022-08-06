@@ -1,0 +1,170 @@
+/* pages/map/edit.wxss */
+.map {
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+/* 地图控件 */
+.controll {
+	position: relative;
+	left: 15px;
+	padding: 5px;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	border-radius: 100px;
+	margin: 10px 0;
+	z-index: 100;
+}
+
+.layers {
+	top: 61%;
+}
+
+.position {
+	top: 61%;
+}
+.full-screen{
+	top: 61%;
+}
+
+.center {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+}
+
+/* 左侧菜单栏 */
+.menu{
+	position: fixed;
+	border-radius: 100px;
+	background: #fff;
+	right: 15px;
+	top: 20%;
+	z-index:1;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	border: #f9a336 solid 1px;
+}
+
+.menu-item{
+	margin: 3px auto;
+	padding: 5px 10px 5px 10px;
+	display: flex;
+	flex-direction: column;
+	color: #565E7A;
+	font-size: 12px;
+	text-align: center;
+}
+.menu-item-border-bottom{
+	border-bottom: #cdcdcd solid 1px;
+}
+.menu-item-icon{
+	margin: 3px auto;
+	width: 24px;
+	height: 24px;
+}
+
+
+/* 顶部工具条 */
+.toolbar {
+	z-index: 999;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 0 auto;
+	background: #fff;
+}
+
+.tools {
+	padding: 5px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.tool {
+	position: relative;
+	margin: 0 10px;
+	color: #565E7A;
+	width: 10%;
+	font-size: 12px;
+	text-align: center;
+}
+
+.red-point {
+	background: #f00;
+	border-radius: 50%;
+	width: 6px;
+	height: 6px;
+	top: 0;
+	right: 0;
+	position: absolute;
+}
+
+.tool-icon {
+	margin: 0 auto 5rpx auto;
+	width: 20px;
+	height: 20px;
+}
+
+.settings {
+	width: 100%;
+}
+
+/* 画笔设置部分 */
+.setting {
+	margin-top: 40px;
+	width: 100%;
+}
+
+/* 笔刷粗细 */
+.brush {
+	width: 80%;
+	margin: 20px auto;
+}
+
+.brush-slider {
+	line-height: 30px;
+	text-align: center;
+	border-radius: 2px;
+	background: #1989fa;
+	width: 30px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.direction {
+	width: 80%;
+	margin: 10px auto;
+	line-height: 24px;
+	color: #515151;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* 颜色选择 */
+.colors {
+	display: flex;
+	width: 80%;
+	margin: 0 auto;
+	justify-content: space-around;
+}
+
+.color-item {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	border-radius: 20px;
+	background: red;
+}
+
+.color-selected {
+	border: #C2C2C2 solid 2px;
+}

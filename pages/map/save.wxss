@@ -1,0 +1,30 @@
+/* pages/map/save.wxss */
+.input{
+	display: flex;
+	flex-direction: column;
+}
+.label{
+	line-height: 40px;
+	padding:0 15px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.tip{
+	color:#999;
+	padding:0 15px;
+	font-size: 12px;
+	line-height: 30px;
+}
+.input-class{
+	border: #f9a336 solid 1px;
+}
+
+.save{
+	margin: 100px 15px;
+}
+.save-btn{
+	border: none;
+	background: #f9a336;
+	border-radius: 200px;
+	color: #fff;
+}

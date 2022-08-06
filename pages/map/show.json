@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "地图详情",
+  "usingComponents": {
+	  "van-popup": "../../vant/popup/index",
+	  "ticket-report-wrapper": "plugin://sdkPlugin/ticket-report-wrapper"
+  }
+}

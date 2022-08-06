@@ -1,0 +1,17 @@
+<!--pages/map/list.wxml-->
+<view class="container">
+	<view class="list">
+		<view class="list-item" wx:for="{{maps}}" bindtap="navToMap" data-id="{{item.id}}" wx:key="{{index}}">
+			<view class="pic">
+				<image src="https://cloud-minapp-30096.cloud.ifanrusercontent.com/1i57UKueO8pbFqQ6.png"></image>
+			</view>
+			<view class="info">
+				<view class="title">{{item.title}}</view>
+				<view class="time">创建时间：{{item.created_at}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="load-more" bindtap="loadMore">
+		<load-more status="{{loadMoreStatus}}"></load-more>
+	</view>
+</view>

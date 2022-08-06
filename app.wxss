@@ -1,0 +1,20 @@
+/**app.wxss**/
+/* 深色黄：#ec7f29 */
+/* 浅色黄：#feab21 */
+/* logo黄 #f9a336 */
+/* 蓝 #4c84ff */
+page{
+	
+}
+.container {
+  height: 100%;
+  box-sizing: border-box;
+}
+.padding{
+  padding: 5px;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+
